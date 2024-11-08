@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+:root {
+  --blue: #4ea8de;
+  --blue-dark: #1e6f9f;
+  --blue-dark-p: #1e709f49;
+  --purple: #8284fa;
+  --purple-dark: #5e60ce;
+  --gray-100: #f2f2f2;
+  --gray-200: #d9d9d9;
+  --gray-300: #808080;
+  --gray-400: #333333;
+  --gray-500: #262626;
+  --gray-600: #1a1a1a;
+  --gray-700: #0d0d0d;
+  --danger: #e25858;
+  --font: "Inter", sans-serif;
+
+  --radius: 0.5rem;
+
+  --gap-m: 0.625rem;
+  --gap-s: 0.875rem;
+  --gap: 1rem;
+  --gap-g: 1.125rem;
+
+  --mb-1: 0.875rem;
+  --mb-2: 1rem;
+  --mb-3: 1.125rem;
+
+  --p-1: 0.625rem;
+  --p-2: 0.875rem;
+  --p-3: 1rem;
+  --p-4: 1.125rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  font-size: var(--gap);
+  color: var(--gray-200);
+  background: var(--gray-600);
+}
+
+.container {
+  width: 75%;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: var(--gap-s);
+  box-sizing: border-box;
+  /* border: 1px solid #c4e40e; */
+}
+
+input {
+  display: block;
+  border: none;
+  width: 100%;
+  height: 54px;
+  padding: var(--gap-m);
+  border-radius: 8px;
+  font-family: var(--font);
+  font-size: var(--gap);
+  color: var(--gray-300);
+  border: 1px solid var(--gray-700, #0d0d0d);
+  background: var(--gray-500, #262626);
+}
+
+input:focus {
+  color: var(--gray-100);
+  outline: 0.5px solid var(--purple-dark);
+}
+.not-found {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.fadeOut {
+  opacity: 0;
+  transform: translatey(-30px);/* Mover para cima enquanto desaparece */
+  transition: opacity 1s ease, transform 1s ease-out ; /* Adicionar transições suaves */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.deleteBotton {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  margin-right: 0.8rem;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  transition: background 0.3s ease-in-out;
+}
+
+.deleteBotton svg {
+  width: 1rem;
+  height: 1rem;
+  transition: fill 0.2s ease-in-out;
+}
+
+.deleteBotton svg:hover path {
+  fill: var(--danger);
+}
+
+.deleteBotton:hover {
+  background: var(--gray-400);
+  border: 0.1rem solid #80808034;
+}
+@media (max-width: 768px) {
+  .container {
+    width: 75%;
+    margin: 0 auto;
+    padding: var(--gap-s);
+
+    box-sizing: border-box;
+
+    /* border: 1px solid #e25858; */
+  }
+}

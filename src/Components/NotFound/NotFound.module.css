@@ -1,0 +1,33 @@
+.sectionStyle {
+  padding: var(--gap-s);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notStyles {
+  width: 46rem;
+  padding: 64px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap);
+  border-radius: var(--radius);
+  border-top: 0.6px solid var(--grey-400, #333);
+}
+.pStyles {
+  line-height: 1.5;
+}
+.pStyles p:nth-child(2) {
+  color: var(--gray-300, #808080);
+}
+
+@media (max-width: 425px) {
+  .notStyles {
+    width: 100%;
+  }
+  .pStyles {
+    font-size: 0.7rem;
+  }
+}
